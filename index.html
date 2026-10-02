@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central do Banco</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0f17;
+    color: #f5f7fa;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #111827, #172554);
+    padding: 55px 20px;
+    text-align: center;
+    border-bottom: 1px solid #26344d;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #aeb9cc;
+    font-size: 18px;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+nav {
+    background: #111827;
+    border: 1px solid #26344d;
+    border-radius: 15px;
+    padding: 18px;
+    margin-bottom: 30px;
+}
+
+nav h2 {
+    margin-bottom: 12px;
+}
+
+nav a {
+    display: inline-block;
+    color: #7dd3fc;
+    text-decoration: none;
+    margin: 5px 12px 5px 0;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    background: #111827;
+    border: 1px solid #26344d;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 25px;
+}
+
+section h2 {
+    color: #7dd3fc;
+    margin-bottom: 12px;
+    font-size: 27px;
+}
+
+section h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #e5e7eb;
+}
+
+.command {
+    background: #080c13;
+    border-left: 4px solid #38bdf8;
+    padding: 18px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.command strong {
+    color: #67e8f9;
+    font-size: 19px;
+}
+
+code {
+    display: block;
+    background: #05070b;
+    color: #d1fae5;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.tip {
+    background: #172554;
+    border: 1px solid #1e40af;
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.warning {
+    background: #422006;
+    border: 1px solid #92400e;
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+ul {
+    margin-left: 22px;
+}
+
+li {
+    margin: 7px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    color: #7f8ba3;
+    border-top: 1px solid #26344d;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 31px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏦 CENTRAL DO BANCO</h1>
+    <p>Guia completo dos comandos do sistema de economia</p>
+</header>
+
+<div class="container">
+
+<nav>
+    <h2>📚 Navegação</h2>
+
+    <a href="#inicio">Início</a>
+    <a href="#conta">Conta</a>
+    <a href="#dinheiro">Dinheiro</a>
+    <a href="#trabalho">Trabalho</a>
+    <a href="#diario">Diário</a>
+    <a href="#emprestimos">Empréstimos</a>
+    <a href="#investimentos">Investimentos</a>
+    <a href="#loja">Loja</a>
+    <a href="#historico">Histórico</a>
+    <a href="#ajuda">Ajuda</a>
+</nav>
+
+<section id="inicio">
+    <h2>👋 Bem-vindo!</h2>
+
+    <p>
+        Este site ensina como utilizar o sistema de economia do servidor.
+        Aqui você encontrará os principais comandos e aprenderá como
+        criar sua conta, ganhar dinheiro, guardar dinheiro no banco,
+        transferir valores, trabalhar, investir e utilizar a loja.
+    </p>
+
+    <div class="tip">
+        💡 <strong>Dica:</strong> comece criando sua conta com
+        <strong>!conta</strong>.
+    </div>
+</section>
+
+<section id="conta">
+    <h2>🏦 1. Criando sua conta</h2>
+
+    <p>
+        Antes de utilizar os recursos financeiros, você precisa possuir
+        uma conta no sistema.
+    </p>
+
+    <div class="command">
+        <strong>!conta</strong>
+        <p>Cria sua conta ou mostra as informações da sua conta atual.</p>
+
+        <code>!conta</code>
+    </div>
+
+    <h3>Informações da conta</h3>
+
+    <ul>
+        <li>💰 Saldo disponível</li>
+        <li>🏦 Dinheiro guardado no banco</li>
+        <li>💼 Emprego</li>
+        <li>💵 Salário</li>
+    </ul>
+</section>
+
+<section id="dinheiro">
+    <h2>💰 2. Sistema de dinheiro</h2>
+
+    <div class="command">
+        <strong>!saldo</strong>
+        <p>Mostra seu dinheiro disponível, dinheiro no banco e patrimônio total.</p>
+
+        <code>!saldo</code>
+    </div>
+
+    <div class="command">
+        <strong>!depositar</strong>
+        <p>Transfere dinheiro do seu saldo para o banco.</p>
+
+        <code>!depositar 500</code>
+    </div>
+
+    <div class="command">
+        <strong>!sacar</strong>
+        <p>Retira dinheiro do banco e coloca no seu saldo.</p>
+
+        <code>!sacar 500</code>
+    </div>
+
+    <div class="command">
+        <strong>!transferir</strong>
+        <p>Envia dinheiro para outro jogador.</p>
+
+        <code>!transferir @usuário 500</code>
+    </div>
+
+    <div class="tip">
+        💡 Sempre confira seu saldo antes de realizar uma transferência.
+    </div>
+</section>
+
+<section id="trabalho">
+    <h2>💼 3. Trabalhando</h2>
+
+    <p>
+        O sistema permite que cada jogador escolha um emprego e receba
+        dinheiro trabalhando.
+    </p>
+
+    <div class="command">
+        <strong>!emprego</strong>
+        <p>Mostra os empregos disponíveis.</p>
+
+        <code>!emprego</code>
+    </div>
+
+    <h3>Exemplos de empregos</h3>
+
+    <ul>
+        <li>👷 Pedreiro — R$ 500</li>
+        <li>👨‍🍳 Cozinheiro — R$ 700</li>
+        <li>🚕 Taxista — R$ 850</li>
+        <li>👨‍💻 Programador — R$ 1.000</li>
+    </ul>
+
+    <h3>Escolhendo um emprego</h3>
+
+    <code>!emprego pedreiro</code>
+
+    <code>!emprego cozinheiro</code>
+
+    <code>!emprego taxista</code>
+
+    <code>!emprego programador</code>
+
+    <div class="command">
+        <strong>!trabalhar</strong>
+        <p>Realiza o trabalho e adiciona o salário ao seu saldo.</p>
+
+        <code>!trabalhar</code>
+    </div>
+</section>
+
+<section id="diario">
+    <h2>🎁 4. Recompensa diária</h2>
+
+    <div class="command">
+        <strong>!diario</strong>
+        <p>Recebe a recompensa diária do servidor.</p>
+
+        <code>!diario</code>
+    </div>
+
+    <div class="tip">
+        🎁 Recompensa atual: <strong>R$ 250</strong>
+    </div>
+</section>
+
+<section id="emprestimos">
+    <h2>💳 5. Empréstimos</h2>
+
+    <p>
+        O sistema permite pegar dinheiro emprestado e depois quitar a dívida.
+    </p>
+
+    <div class="command">
+        <strong>!emprestimo</strong>
+        <p>Solicita um empréstimo.</p>
+
+        <code>!emprestimo 1000</code>
+    </div>
+
+    <div class="warning">
+        ⚠️ Os empréstimos possuem uma taxa. Confira o valor da dívida
+        antes de solicitar.
+    </div>
+
+    <div class="command">
+        <strong>!pagar</strong>
+        <p>Quita a dívida do empréstimo.</p>
+
+        <code>!pagar</code>
+    </div>
+</section>
+
+<section id="investimentos">
+    <h2>📈 6. Investimentos</h2>
+
+    <p>
+        Você pode separar parte do seu dinheiro para investimentos.
+    </p>
+
+    <div class="command">
+        <strong>!investir</strong>
+        <p>Coloca uma quantia em investimento.</p>
+
+        <code>!investir 1000</code>
+    </div>
+
+    <div class="command">
+        <strong>!resgatar</strong>
+        <p>Retira o dinheiro investido e recebe o rendimento configurado.</p>
+
+        <code>!resgatar</code>
+    </div>
+
+    <div class="tip">
+        📊 Exemplo: um investimento de R$ 1.000 com rendimento de 10%
+        retorna R$ 1.100.
+    </div>
+</section>
+
+<section id="loja">
+    <h2>🛒 7. Loja</h2>
+
+    <div class="command">
+        <strong>!loja</strong>
+        <p>Mostra os produtos disponíveis.</p>
+
+        <code>!loja</code>
+    </div>
+
+    <h3>Produtos disponíveis</h3>
+
+    <ul>
+        <li>⚔️ Espada — R$ 500</li>
+        <li>🛡️ Escudo — R$ 750</li>
+        <li>🏎️ Carro — R$ 5.000</li>
+        <li>🏠 Casa — R$ 10.000</li>
+    </ul>
+
+    <div class="command">
+        <strong>!comprar</strong>
+        <p>Compra um produto utilizando seu saldo.</p>
+
+        <code>!comprar espada</code>
+
+        <code>!comprar escudo</code>
+
+        <code>!comprar carro</code>
+
+        <code>!comprar casa</code>
+    </div>
+
+    <div class="command">
+        <strong>!inventario</strong>
+        <p>Mostra os itens que você possui.</p>
+
+        <code>!inventario</code>
+    </div>
+</section>
+
+<section id="historico">
+    <h2>📜 8. Histórico</h2>
+
+    <div class="command">
+        <strong>!historico</strong>
+        <p>
+            Mostra o histórico das movimentações financeiras registradas
+            pelo sistema.
+        </p>
+
+        <code>!historico</code>
+    </div>
+
+    <h3>Exemplos de movimentações</h3>
+
+    <ul>
+        <li>💰 Depósitos</li>
+        <li>💸 Saques</li>
+        <li>🔄 Transferências</li>
+        <li>💼 Salários</li>
+    </ul>
+</section>
+
+<section id="ranking">
+    <h2>🏆 9. Ranking</h2>
+
+    <div class="command">
+        <strong>!ranking</strong>
+        <p>Consulta o ranking de riqueza do servidor.</p>
+
+        <code>!ranking</code>
+    </div>
+
+    <div class="tip">
+        🏆 O ranking permite comparar o patrimônio dos jogadores
+        conforme o sistema configurado no bot.
+    </div>
+</section>
+
+<section id="ajuda">
+    <h2>❓ 10. Central de ajuda</h2>
+
+    <div class="command">
+        <strong>!ajuda</strong>
+        <p>Mostra a lista de comandos disponíveis no próprio Discord.</p>
+
+        <code>!ajuda</code>
+    </div>
+
+    <h3>📋 Lista completa</h3>
+
+    <code>
+!conta
+!saldo
+
+!depositar &lt;valor&gt;
+!sacar &lt;valor&gt;
+!transferir @usuário &lt;valor&gt;
+
+!emprego
+!trabalhar
+!diario
+
+!emprestimo &lt;valor&gt;
+!pagar
+
+!investir &lt;valor&gt;
+!resgatar
+
+!loja
+!comprar &lt;item&gt;
+!inventario
+
+!historico
+!ranking
+!ajuda
+    </code>
+</section>
+
+<section>
+    <h2>🚀 Ordem recomendada para começar</h2>
+
+    <p>Se você acabou de entrar no servidor, siga esta sequência:</p>
+
+    <div class="command">
+        <strong>1️⃣ Criar conta</strong>
+        <code>!conta</code>
+    </div>
+
+    <div class="command">
+        <strong>2️⃣ Escolher emprego</strong>
+        <code>!emprego</code>
+    </div>
+
+    <div class="command">
+        <strong>3️⃣ Trabalhar</strong>
+        <code>!trabalhar</code>
+    </div>
+
+    <div class="command">
+        <strong>4️⃣ Conferir dinheiro</strong>
+        <code>!saldo</code>
+    </div>
+
+    <div class="command">
+        <strong>5️⃣ Guardar dinheiro</strong>
+        <code>!depositar 500</code>
+    </div>
+
+    <div class="command">
+        <strong>6️⃣ Usar outros recursos</strong>
+        <code>!transferir @usuário 100</code>
+        <code>!investir 500</code>
+        <code>!loja</code>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    🏦 Central do Banco • Sistema de Economia Discord
+    <br>
+    Desenvolvido para auxiliar os jogadores a aprenderem os comandos.
+</footer>
+
+</body>
+  </html>
